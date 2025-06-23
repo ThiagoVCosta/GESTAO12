@@ -3,7 +3,7 @@
 import React from 'react';
 import { AppUser, Role, Vehicle, Request as CautelaRequest, VehicleStatus, RequestStatus, ChecklistItemConfig, TranslateStatusType, HistoryLog, FleetType, TranslateFleetTypeType } from './types';
 
-export const FULLY_SIMULATED_MODE = false; // Ensures app runs in simulated mode by default
+export const FULLY_SIMULATED_MODE = true; // Ensures app runs in simulated mode by default
 export const SESSION_DURATION_MINUTES = 60; // Minutes for normal session
 export const SIMULATED_SESSION_DURATION_MINUTES = 5; // Shorter duration for testing in simulated mode
 
