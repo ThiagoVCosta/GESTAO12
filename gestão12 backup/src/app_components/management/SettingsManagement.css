@@ -1,0 +1,220 @@
+
+
+.settings-management .management-title {
+  margin-bottom: 25px;
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+.setting-card {
+  background-color: #131A28; /* New: Card Background */
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Adjusted shadow */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #243046; /* New: Border color */
+}
+
+.setting-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF; /* New: Main Text */
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #243046; /* New: Border color */
+}
+
+.settings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-grow: 1; 
+}
+
+.settings-list-item {
+  display: flex;
+  /* justify-content: space-between; */ /* Adjusted for drag handle */
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #243046; /* New: Border color */
+  color: #FFFFFF; /* New: Main Text */
+  font-size: 0.95rem;
+  position: relative; /* For drag-over indicators */
+}
+.settings-list-item:last-child {
+  border-bottom: none;
+}
+
+.settings-list-item.fixed-item {
+  color: #A2AFC0; /* New: Table Header/Secondary text for fixed items */
+}
+.settings-list-item.fixed-item .action-button.delete {
+  display: none; 
+}
+.fixed-item-indicator {
+  font-size: 0.75rem;
+  color: #A2AFC0; /* New: Table Header/Secondary Text */
+  background-color: #1E2735; /* New: Input/Filter Background */
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-style: italic;
+}
+
+
+.settings-list-item .item-type {
+  font-size: 0.8rem;
+  color: #B0BCCE; /* New: Placeholder/Muted text */
+  margin-left: 5px;
+}
+
+.settings-list-item .item-actions { /* Container for delete button and fixed indicator */
+  margin-left: auto; /* Pushes actions to the right */
+  display: flex;
+  align-items: center;
+}
+
+.settings-list-item .action-button.delete {
+  padding: 4px; 
+  color: #A2AFC0; /* New: Table Header Text for icon */
+}
+.settings-list-item .action-button.delete:hover {
+  color: #f87171; /* Red on hover */
+  background-color: #1F283C;
+}
+.settings-list-item .action-button.delete svg {
+  width: 16px;
+  height: 16px;
+}
+
+.add-item-form {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; 
+}
+
+.add-item-form input[type="text"],
+.add-item-form select { /* Will inherit from index.css: bg #1E2735, border #243046, text #FFFFFF */
+  flex-grow: 1;
+  margin-bottom: 0; 
+}
+
+.add-item-form .add-button-inline { /* Uses default button styles from index.css (primary #2563EB) */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 15px; 
+  white-space: nowrap; 
+}
+.add-item-form .add-button-inline svg {
+  width: 16px;
+  height: 16px;
+}
+
+.checklist-add-form {
+  /* No specific styles needed if flex handles it, but can be used for more complex layouts */
+}
+
+.empty-list-info {
+  color: #B0BCCE; /* New: Placeholder/Muted text */
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Drag and Drop Styles for Checklist Items */
+.checklist-items-list .settings-list-item.checklist-item-draggable {
+  cursor: grab;
+  user-select: none; /* Prevent text selection during drag */
+  padding-left: 5px; /* Space for handle */
+}
+.checklist-items-list .settings-list-item.checklist-item-draggable:active {
+  cursor: grabbing;
+}
+
+
+.drag-handle-icon {
+  color: #A2AFC0; /* Muted color for handle */
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.checklist-item-label-text {
+  flex-grow: 1; /* Allow label to take space */
+}
+
+
+/* Style for the item being dragged */
+.settings-list-item.dragging {
+  opacity: 0.5;
+  background-color: #1F283C; /* Active Nav Background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Placeholder style for where the item originated, if needed (often combined with .dragging) */
+.settings-list-item.dragging-placeholder {
+  /* opacity: 0.3; */ /* Or some other visual cue */
+  /* border: 1px dashed #2563EB; */
+}
+
+
+/* Visual indicator for drop target */
+.settings-list-item.drag-over-target {
+  /* Example: Show a line above the target item */
+  border-top: 2px solid #2563EB; /* Primary button color */
+  padding-top: 8px; /* Adjust padding to make space for the border */
+  margin-top: -2px; /* Counteract border thickness */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .settings-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+  .setting-card {
+    padding: 15px 20px;
+  }
+  .setting-card-title {
+    font-size: 1.1rem;
+  }
+  .settings-list-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-item-form {
+    flex-direction: column; 
+  }
+  .add-item-form input[type="text"],
+  .add-item-form select,
+  .add-item-form .add-button-inline {
+    width: 100%; 
+  }
+  .setting-card-title {
+    font-size: 1rem;
+  }
+  .settings-list-item {
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+  .settings-list-item .item-type {
+    font-size: 0.75rem;
+  }
+  .drag-handle-icon {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+}

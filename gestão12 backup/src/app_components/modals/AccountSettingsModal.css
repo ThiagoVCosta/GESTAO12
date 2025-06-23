@@ -1,0 +1,111 @@
+.account-settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.current-email-display {
+  font-size: 1rem;
+  color: #FFFFFF; /* New: Main Text */
+  background-color: #1E2735; /* New: Input/Filter Background */
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #243046; /* New: Border color */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.current-email-display .display-icon {
+    width: 20px;
+    height: 20px;
+    color: #B0BCCE; /* New: Muted text */
+}
+
+.current-email-display strong {
+  color: #FFFFFF; /* New: Main Text */
+  font-weight: 600;
+}
+
+.settings-form.card,
+.email-info-section.card { /* Apply card styles to email-info-section as well */
+  padding: 20px; 
+}
+
+
+.settings-form .form-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF; /* New: Main Text */
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #243046; /* New: Border color */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.settings-form .form-title svg {
+    width: 20px;
+    height: 20px;
+    color: #B0BCCE; /* New: Muted text */
+}
+
+
+.settings-form .form-group {
+  margin-bottom: 18px;
+}
+
+.settings-form label { /* Inherits from index.css */
+  /* display: block; */
+  /* margin-bottom: 6px; */
+  /* font-weight: 500; */
+  /* color: #B0BCCE; */
+}
+
+.settings-form input[type="email"],
+.settings-form input[type="password"] { /* Inherits from index.css */
+  /* width: 100%; */
+  /* box-sizing: border-box; */
+}
+
+.settings-form .button { /* Inherits from index.css */
+  width: 100%;
+  margin-top: 10px; /* Space above button if there's an error */
+}
+
+.settings-form .form-error { /* Uses .auth-error class from App.css */
+  margin-top: 15px; /* Ensure space from last input */
+  margin-bottom: 5px; /* Space before button */
+}
+
+.email-change-admin-notice {
+  font-size: 0.95rem;
+  color: #FFFFFF; /* Main text color for readability */
+  background-color: #1E2735; /* Input/Filter Background or a slightly different shade */
+  padding: 12px 18px;
+  border-radius: 6px;
+  border-left: 4px solid #f97316; /* Orange for informational emphasis */
+  line-height: 1.5;
+}
+
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .account-settings-content {
+    gap: 20px;
+  }
+  .current-email-display {
+    font-size: 0.95rem;
+  }
+  .settings-form.card,
+  .email-info-section.card {
+    padding: 15px;
+  }
+  .settings-form .form-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .email-change-admin-notice {
+    font-size: 0.9rem;
+  }
+}

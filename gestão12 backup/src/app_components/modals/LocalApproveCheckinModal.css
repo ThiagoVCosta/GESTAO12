@@ -1,0 +1,141 @@
+.approve-checkin-modal-content h4 {
+  font-size: 1.1rem;
+  color: #FFFFFF; /* New: Main Text */
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #243046; /* New: Border color */
+}
+.approve-checkin-modal-content h4:first-of-type {
+    margin-top: 0;
+}
+
+.approve-checkin-modal-content .details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px 15px;
+  margin-bottom: 15px;
+}
+.approve-checkin-modal-content .details-grid p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #FFFFFF; /* New: Main Text */
+}
+.approve-checkin-modal-content .details-grid p strong {
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  margin-right: 5px;
+}
+
+.approve-checkin-modal-content .form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.approve-checkin-modal-content .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+}
+/* Inputs and textareas will inherit from index.css: bg #1E2735, border #243046, text #FFFFFF */
+.approve-checkin-modal-content textarea,
+.approve-checkin-modal-content input[type="number"],
+.approve-checkin-modal-content input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.observations-review {
+    background-color: #1E2735; /* New: Input/Filter Background for consistency */
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    border: 1px solid #243046; /* New: Border color */
+}
+.observations-review strong {
+    color: #B0BCCE; /* New: Placeholder/Muted Text */
+    display: block;
+    margin-bottom: 5px;
+}
+.observations-review p {
+    margin: 0;
+    color: #FFFFFF; /* New: Main Text */
+    white-space: pre-wrap; 
+}
+
+.checklist-form-section {
+  background-color: #131A28; /* New: Card Background */
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  max-height: 250px; 
+  overflow-y: auto;
+  border: 1px solid #243046; /* New: Border color */
+}
+
+.checkin-checklist-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.checkin-checklist-item-label {
+  font-size: 0.9rem;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  margin-bottom: 6px;
+}
+
+.checkin-checklist-input { /* Styles the input elements within the checklist */
+  background-color: #1E2735; /* New: Input/Filter Background */
+  border-color: #243046; /* New: Border color */
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.boolean-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-button { /* Base for inactive toggle buttons */
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #243046; /* New: Border color */
+  border-radius: 6px;
+  background-color: #1E2735; /* New: Input/Filter Background */
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.toggle-button:hover {
+  background-color: #131A28; /* New: Card Background for hover */
+  border-color: #1F283C; /* New: Active Nav Background for hover border */
+}
+
+/* Active states remain semantic */
+.toggle-button.ok.active {
+  background-color: #166534;
+  border-color: #15803d;
+  color: #f0fdf4;
+}
+.toggle-button.ok.active:hover {
+  background-color: #14532d;
+}
+
+.toggle-button.not-ok.active {
+  background-color: #991b1b;
+  border-color: #b91c1c;
+  color: #fef2f2;
+}
+.toggle-button.not-ok.active:hover {
+  background-color: #7f1d1d;
+}
+
+.approve-checkin-modal-content .form-error { 
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  /* Uses .auth-error styles for color, bg, border from App.css */
+}

@@ -1,0 +1,109 @@
+.user-panel {
+  padding: 10px 0; 
+}
+
+.panel-section {
+  margin-bottom: 30px;
+}
+
+/* Section Title is globally styled in App.css */
+
+.empty-state {
+  color: #A2AFC0; /* New: Table Header / Secondary Text */
+  text-align: center;
+  padding: 20px;
+  background-color: #131A28; /* New: Card Background */
+  border-radius: 8px;
+  border: 1px solid #243046; /* New: Border color */
+}
+
+/* Current Vehicle Section */
+.current-vehicle-section .card { /* Uses global .card styles (#131A28 bg, #243046 border) */
+  border-left: 6px solid #2563EB; /* New: Primary Button color for accent */
+  padding: 25px;
+}
+
+.current-vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+.current-vehicle-prefixo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.current-vehicle-model {
+  font-size: 1rem;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+}
+
+.current-vehicle-details p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.current-vehicle-details p strong {
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+}
+
+.request-devolution-button { /* Will use .button-success from index.css */
+  width: 100%;
+  padding: 12px;
+  font-size: 1.05rem;
+  margin-top: 20px;
+}
+
+
+/* Vehicle Grid Layout */
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 20px;
+}
+
+/* Specific styling for maintenance grid if different from general vehicle grid */
+.maintenance-grid .vehicle-card {
+  /* VehicleCard.css handles its own styling, including .maintenance variant */
+}
+
+@media (max-width: 768px) {
+  .vehicle-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .current-vehicle-prefixo {
+    font-size: 1.6rem;
+  }
+  .current-vehicle-section .card {
+    padding: 20px;
+  }
+  .request-devolution-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-grid {
+    grid-template-columns: 1fr; 
+  }
+  .current-vehicle-prefixo {
+    font-size: 1.4rem;
+  }
+  .current-vehicle-model {
+    font-size: 0.9rem;
+  }
+   .current-vehicle-details p {
+    font-size: 0.9rem;
+  }
+  .current-vehicle-section .card {
+    padding: 15px;
+  }
+}

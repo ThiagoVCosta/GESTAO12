@@ -1,0 +1,119 @@
+.sgv-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0B0E14; /* New: App/Navbar Background */
+}
+
+/* App Header is now in LocalHeader.css */
+
+.dashboard-container {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px; /* Max width for content area */
+  margin: 0 auto; /* Center content */
+  box-sizing: border-box;
+  padding-top: 70px; /* Added padding for fixed header (approx height) */
+}
+
+/* Dashboard Content styling might be more specific to panels */
+.dashboard-content {
+  /* Removed general card styling from here, apply to specific panel containers if needed */
+  padding: 0; /* Let panels manage their padding */
+}
+
+.dashboard-content h3, .dashboard-content h4 {
+  color: #FFFFFF; /* New: Main Text */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* App Footer Styles */
+.app-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #0B0E14; /* New: App/Navbar Background */
+  color: #A2AFC0; /* New: Table Header / Secondary Text */
+  font-size: 0.875rem;
+  border-top: 1px solid #243046; /* New: Border color */
+}
+
+/* General App Loading Styles */
+.app-loading-container {
+  display: flex;
+  flex-direction: column; /* Allow text below spinner */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.app-loading-container p {
+  margin-top: 1rem; /* Space between spinner and text */
+}
+
+/* Login Screen styles are now in MatriculaLoginScreen.css */
+/* Auth error styling for login screen */
+.auth-error {
+  color: #FCA5A5; /* Lighter red for better contrast on dark backgrounds */
+  background-color: #450A0A; /* Dark red background */
+  border: 1px solid #7F1D1D; /* Darker red border */
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Placeholder for Modal styling which will be in Modal.css */
+/* Example: Modal open state, handled by JS by adding a class or inline styles */
+.modal-open {
+  /* Potentially add body overflow: hidden here if modal is fixed fullscreen */
+}
+
+/* Section Title Styling (reusable) */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF; /* New: Main Text */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #243046; /* New: Border color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+    padding-top: 65px; /* Adjust for potentially smaller header */
+  }
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .app-footer {
+    font-size: 0.8rem;
+    padding: 1rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 10px;
+     padding-top: 90px; /* Adjusted for 2-line mobile header + gap */
+  }
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .app-loading-container {
+    font-size: 1rem;
+  }
+   .auth-error {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}

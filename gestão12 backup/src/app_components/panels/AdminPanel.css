@@ -1,0 +1,97 @@
+.admin-panel {
+  padding: 0; /* Let sections have their own padding */
+}
+
+.panel-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FFFFFF; /* New: Main Text */
+  margin-bottom: 20px;
+  /* border-bottom: 1px solid #243046; */ /* New: Border Color (optional for title) */
+  /* padding-bottom: 10px; */
+}
+
+.admin-tabs {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #243046; /* New: Border color for tab bar */
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+.admin-tabs::-webkit-scrollbar {
+  display: none; 
+}
+.admin-tabs {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+
+.tab-button {
+  background-color: transparent;
+  color: #A2AFC0; /* New: Table Header / Secondary Text for inactive */
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px 8px 0 0; 
+  margin-bottom: -2px; 
+  border-bottom: 2px solid transparent; 
+  white-space: nowrap; 
+}
+
+.tab-button:hover {
+  color: #FFFFFF; /* New: Main Text on hover */
+  background-color: #131A28; /* New: Card Background for subtle hover */
+}
+
+.tab-button.active {
+  background-color: #1F283C; /* New: Active Navigation Item Background */
+  color: #FFFFFF; /* New: Main Text */
+  font-weight: 600;
+  border-bottom-color: #1F283C; 
+}
+
+.tab-button .tab-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0; 
+}
+
+.admin-tab-content {
+  padding-top: 2px; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .panel-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  .tab-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel-title {
+    font-size: 1.4rem;
+  }
+  .tab-button {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+  .tab-button .tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

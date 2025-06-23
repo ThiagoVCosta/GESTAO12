@@ -1,0 +1,83 @@
+.request-vehicle-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form sections */
+}
+
+.form-section {
+  /* Group related fields */
+}
+
+.form-section h4 {
+  font-size: 1.1rem;
+  color: #FFFFFF; /* New: Main Text */
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #243046; /* New: Border color */
+}
+
+.checklist-section {
+  background-color: #131A28; /* New: Card Background */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #243046; /* New: Border color */
+}
+
+.checklist-item {
+  display: flex;
+  flex-direction: column; /* Stack label and input/toggle */
+  margin-bottom: 15px;
+}
+
+.checklist-item-label {
+  font-size: 0.9rem;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  margin-bottom: 6px; /* Space between label and input */
+}
+
+.checklist-input {
+  /* Uses global input styles: bg #1E2735, border #243046, text #FFFFFF */
+}
+
+.boolean-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.toggle-button { /* Base for inactive */
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #243046; /* New: Border color */
+  border-radius: 6px;
+  background-color: #1E2735; /* New: Input/Filter Background */
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.toggle-button:hover {
+  background-color: #131A28; /* New: Card Background */
+  border-color: #1F283C; /* New: Active Nav Item Background */
+}
+
+/* Semantic colors for active toggles remain */
+.toggle-button.ok.active {
+  background-color: #166534; 
+  border-color: #15803d;
+  color: #f0fdf4;
+}
+.toggle-button.ok.active:hover {
+  background-color: #14532d;
+}
+
+.toggle-button.not-ok.active {
+  background-color: #991b1b; 
+  border-color: #b91c1c;
+  color: #fef2f2;
+}
+.toggle-button.not-ok.active:hover {
+  background-color: #7f1d1d;
+}
+
+/* Ensure footer buttons are handled by Modal.css and global button styles */

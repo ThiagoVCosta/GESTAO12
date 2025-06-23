@@ -1,0 +1,55 @@
+/* src/app_components/modals/LocalUserActionsModal.css */
+/* Reuses styles from LocalVehicleActionsModal.css for consistency */
+
+.local-actions-modal-content .item-info {
+  background-color: #1E2735;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #243046;
+}
+
+.local-actions-modal-content .item-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.local-actions-modal-content .item-info p strong {
+  color: #B0BCCE;
+  min-width: 70px; 
+  display: inline-block;
+}
+
+.actions-buttons-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-modal-button {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.action-modal-button svg {
+  margin-right: 10px;
+}
+
+.action-modal-button.button-danger {
+  /* Uses global .button-danger styles */
+}
+.action-modal-button.button-danger:disabled {
+    background-color: #450A0A; 
+    color: #7F1D1D;
+    border-color: transparent;
+}
+.action-modal-button.button-danger:disabled:hover {
+    background-color: #450A0A;
+}
+.action-modal-button:disabled {
+    /* Uses global button:disabled styles */
+}

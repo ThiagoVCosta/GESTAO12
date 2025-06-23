@@ -1,0 +1,85 @@
+/* src/app_components/modals/VehicleCautelaHistoryModal.css */
+.vehicle-cautela-history-content {
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.vehicle-current-details {
+  background-color: #1E2735; /* New: Input/Filter Background for a slightly different shade */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  border: 1px solid #243046; /* New: Border color */
+}
+
+.vehicle-current-details .detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-current-details .detail-label {
+  font-size: 0.8rem;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  margin-bottom: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.vehicle-current-details .detail-value {
+  font-size: 0.95rem;
+  color: #FFFFFF; /* New: Main Text */
+  font-weight: 600;
+}
+
+/* Status specific coloring for detail-value within this specific section */
+.vehicle-current-details .detail-value.status-disponivel { color: #86EFAC; }
+.vehicle-current-details .detail-value.status-em_uso { color: #FDE047; }
+.vehicle-current-details .detail-value.status-manutencao { color: #FDBA74; }
+.vehicle-current-details .detail-value.status-aguardando_recebimento { color: #B0BCCE;}
+
+
+.vehicle-cautela-history-content .table-container {
+  max-height: 55vh; /* Adjusted max-height to accommodate new details section */
+  overflow-y: auto;
+  border: 1px solid #243046; /* New: Border color */
+  border-radius: 8px; 
+}
+
+/* Reusing .management-table styles from ManagementPages.css */
+/* The global .management-table styles in ManagementPages.css will largely apply due to new color scheme */
+/* Specific overrides for modal context if needed: */
+.vehicle-cautela-history-content .management-table th,
+.vehicle-cautela-history-content .management-table td {
+  padding: 10px 12px; 
+  font-size: 0.9rem;
+  /* Colors for text, th background, td borders will be inherited or defined by the generalized rules */
+}
+
+.vehicle-cautela-history-content .management-table th {
+  background-color: #131A28; /* New: Card Background for sticky header base */
+  border-bottom: 1px solid #243046 !important; /* Ensure TH bottom border is the general divider color */
+  color: #A2AFC0; /* New: Table Header text */
+  position: sticky; 
+  top: 0;
+  z-index: 1;
+}
+
+.vehicle-cautela-history-content .management-table td {
+   border-bottom: 1px solid #1F283C !important; /* New: Table Row Divider */
+}
+.vehicle-cautela-history-content .management-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+.vehicle-cautela-history-content .management-table tbody tr:hover {
+  background-color: #1F283C !important; /* New: Active Nav Item bg for hover */
+}
+
+
+.vehicle-cautela-history-content .empty-state {
+  color: #A2AFC0; /* New: Table Header / Secondary Text */
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}

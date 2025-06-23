@@ -1,0 +1,60 @@
+.vehicle-detail-content {
+  color: #FFFFFF; /* New: Main Text */
+}
+
+.vehicle-image-container { /* Style kept for structure, image itself removed from TSX */
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #1E2735; /* New: Input/Filter Background for placeholder */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column; 
+  padding: 8px 0;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #B0BCCE; /* New: Placeholder/Muted Text */
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: #FFFFFF; /* New: Main Text */
+  font-weight: 500;
+}
+
+/* Status specific coloring for detail-value */
+.detail-value.status-disponivel {
+  color: #86EFAC; /* Brighter green, consistent with VehicleCard */
+}
+.detail-value.status-em_uso {
+  color: #FDE047; /* Kept */
+}
+.detail-value.status-manutencao {
+  color: #FDBA74; /* Kept */
+}
+.detail-value.status-aguardando_recebimento {
+  color: #B0BCCE; /* New: Placeholder/Muted Text, consistent with ManagementPages status tag */
+}
