@@ -1,0 +1,90 @@
+@media print {
+  body.is-printing .local-header,
+  body.is-printing .app-footer,
+  body.is-printing .admin-tabs, /* From AdminPanel/ReservaPanel */
+  body.is-printing .panel-title, /* From AdminPanel/ReservaPanel, if not the history title */
+  body.is-printing .management-header .filter-controls, /* Filters in HistoryManagement */
+  body.is-printing .management-header .button, /* Print button itself */
+  body.is-printing .actions-cell, /* Action buttons in the table */
+  body.is-printing .modal-overlay {
+    display: none !important;
+  }
+  
+  /* Ensure containers of the printable area are visible and take full width */
+  body.is-printing,
+  body.is-printing #root,
+  body.is-printing .sgv-app,
+  body.is-printing .dashboard-container,
+  body.is-printing .admin-panel, /* or .reserva-panel */
+  body.is-printing .admin-tab-content,
+  body.is-printing .management-page.history-management-page,
+  body.is-printing .management-page.history-management-page .table-container,
+  body.is-printing .management-page.history-management-page .management-table {
+    display: block !important;
+    visibility: visible !important; /* Ensure visibility if a parent was hidden */
+    width: 100% !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #fff !important; 
+    color: #000 !important;
+    overflow: visible !important; /* Prevent content clipping */
+  }
+
+  body.is-printing {
+    margin: 20mm; /* Standard print margin */
+    font-family: Arial, sans-serif;
+    font-size: 10pt; /* Base font size for print */
+  }
+
+  /* Specifically style the title for the printed report */
+  body.is-printing .management-page.history-management-page .management-title {
+     display: block !important;
+     font-size: 16pt !important;
+     font-weight: bold !important;
+     text-align: center !important;
+     margin-bottom: 20px !important;
+     color: #000 !important;
+     border-bottom: none !important;
+   }
+
+  /* Table styling for print */
+  body.is-printing .management-table th,
+  body.is-printing .management-table td {
+    border: 1px solid #ccc !important; /* Simple borders */
+    padding: 6px 8px !important; /* Adjust padding for print */
+    text-align: left !important;
+    color: #000 !important;
+    background-color: #fff !important;
+    word-wrap: break-word; /* Allow long words to break to prevent overflow */
+    white-space: normal; /* Allow text to wrap within cells */
+  }
+
+  body.is-printing .management-table th {
+    background-color: #f0f0f0 !important; /* Light gray for headers */
+    font-weight: bold !important;
+  }
+  
+  /* Empty state message styling for print */
+   body.is-printing .management-page.history-management-page .empty-state {
+     display: block !important;
+     color: #555 !important;
+     text-align: center !important;
+     font-style: italic !important;
+     margin-top: 20px !important;
+     padding: 10px !important;
+     background-color: #fff !important;
+     border: 1px dashed #ccc !important; /* Optional: border for empty state */
+  }
+
+  /* Remove page breaks inside table rows */
+  body.is-printing .management-table tr {
+    page-break-inside: avoid !important;
+  }
+  /* Suggest page break before the table if it's long and after the title */
+   body.is-printing .management-page.history-management-page .management-title + .table-container {
+    page-break-before: auto !important;
+  }
+}
